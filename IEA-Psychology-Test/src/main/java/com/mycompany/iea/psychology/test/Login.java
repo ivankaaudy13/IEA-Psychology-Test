@@ -4,16 +4,18 @@
  */
 package com.mycompany.iea.psychology.test;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Asus
  */
-public class Home extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame {
 
     /**
-     * Creates new form Home
+     * Creates new form Login
      */
-    public Home() {
+    public Login() {
         initComponents();
     }
 
@@ -27,28 +29,36 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        START_BTN = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        LOGIN_BTN = new javax.swing.JButton();
+        USERNAME_TEXT = new javax.swing.JTextField();
+        AGE_SPINNER = new javax.swing.JSpinner();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(102, 102, 255));
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        START_BTN.setBackground(new java.awt.Color(0, 0, 153));
-        START_BTN.setForeground(java.awt.Color.white);
-        START_BTN.setText("START");
-        START_BTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        START_BTN.addActionListener(new java.awt.event.ActionListener() {
+        LOGIN_BTN.setBackground(new java.awt.Color(0, 0, 153));
+        LOGIN_BTN.setForeground(java.awt.Color.white);
+        LOGIN_BTN.setText("Login");
+        LOGIN_BTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LOGIN_BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                START_BTNActionPerformed(evt);
+                LOGIN_BTNActionPerformed(evt);
             }
         });
-        jPanel1.add(START_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 738, 242, 51));
+        jPanel1.add(LOGIN_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 738, 250, 51));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Home.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 930));
+        USERNAME_TEXT.setBackground(new java.awt.Color(231, 221, 221));
+        USERNAME_TEXT.setText("Username");
+        USERNAME_TEXT.setBorder(null);
+        USERNAME_TEXT.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jPanel1.add(USERNAME_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 250, 30));
+        jPanel1.add(AGE_SPINNER, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 600, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Login.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 930));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,13 +74,20 @@ public class Home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void START_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_START_BTNActionPerformed
+    private void LOGIN_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGIN_BTNActionPerformed
         // TODO add your handling code here:
-        Login LOGIN = new Login();
-        LOGIN.setLocationRelativeTo(null);
-        LOGIN.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_START_BTNActionPerformed
+        String USERNAME = USERNAME_TEXT.getText();
+        int AGE = (int) AGE_SPINNER.getValue();
+
+        if (AGE < 13) {
+            JOptionPane.showConfirmDialog(null, "Umur anda belum mencukupi!", "Warning", JOptionPane.OK_OPTION);
+        } else {
+            Dashboard DASHBOARD = new Dashboard(USERNAME);
+            DASHBOARD.setLocationRelativeTo(null);
+            DASHBOARD.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_LOGIN_BTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,27 +106,29 @@ public class Home extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Home().setVisible(true);
+                new Login().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton START_BTN;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSpinner AGE_SPINNER;
+    private javax.swing.JButton LOGIN_BTN;
+    private javax.swing.JTextField USERNAME_TEXT;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
