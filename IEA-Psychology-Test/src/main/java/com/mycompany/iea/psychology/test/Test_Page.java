@@ -164,55 +164,55 @@ public class Test_Page extends javax.swing.JFrame {
         switch (CHANGE_QUESTION) {
             case 1:
                 QUESTION_LBL.setText(SOAL2[0]);
-                C_BTN.setText(SOAL2[1]);
+                A_BTN.setText(SOAL2[1]);
                 B_BTN.setText(SOAL2[2]);
                 C_BTN.setText(SOAL2[3]);
                 break;
             case 2:
                 QUESTION_LBL.setText(SOAL3[0]);
-                C_BTN.setText(SOAL3[1]);
+                A_BTN.setText(SOAL3[1]);
                 B_BTN.setText(SOAL3[2]);
                 C_BTN.setText(SOAL3[3]);
                 break;
             case 3:
                 QUESTION_LBL.setText(SOAL4[0]);
-                C_BTN.setText(SOAL4[1]);
+                A_BTN.setText(SOAL4[1]);
                 B_BTN.setText(SOAL4[2]);
                 C_BTN.setText(SOAL4[3]);
                 break;
             case 4:
                 QUESTION_LBL.setText(SOAL5[0]);
-                C_BTN.setText(SOAL5[1]);
+                A_BTN.setText(SOAL5[1]);
                 B_BTN.setText(SOAL5[2]);
                 C_BTN.setText(SOAL5[3]);
                 break;
             case 5:
                 QUESTION_LBL.setText(SOAL6[0]);
-                C_BTN.setText(SOAL6[1]);
+                A_BTN.setText(SOAL6[1]);
                 B_BTN.setText(SOAL6[2]);
                 C_BTN.setText(SOAL6[3]);
                 break;
             case 6:
                 QUESTION_LBL.setText(SOAL7[0]);
-                C_BTN.setText(SOAL7[1]);
+                A_BTN.setText(SOAL7[1]);
                 B_BTN.setText(SOAL7[2]);
                 C_BTN.setText(SOAL7[3]);
                 break;
             case 7:
                 QUESTION_LBL.setText(SOAL8[0]);
-                C_BTN.setText(SOAL8[1]);
+                A_BTN.setText(SOAL8[1]);
                 B_BTN.setText(SOAL8[2]);
                 C_BTN.setText(SOAL8[3]);
                 break;
             case 8:
                 QUESTION_LBL.setText(SOAL9[0]);
-                C_BTN.setText(SOAL9[1]);
+                A_BTN.setText(SOAL9[1]);
                 B_BTN.setText(SOAL9[2]);
                 C_BTN.setText(SOAL9[3]);
                 break;
             case 9:
                 QUESTION_LBL.setText(SOAL10[0]);
-                C_BTN.setText(SOAL10[1]);
+                A_BTN.setText(SOAL10[1]);
                 B_BTN.setText(SOAL10[2]);
                 C_BTN.setText(SOAL10[3]);
                 break;
@@ -232,60 +232,60 @@ public class Test_Page extends javax.swing.JFrame {
         // TODO add your handling code here:
         INTROVERT++;
         CHANGE_QUESTION++;
-        System.out.println("EKSTROVERT : " + INTROVERT + "\nCHANGE QUESTION" + CHANGE_QUESTION);
+        System.out.println("INTROVERT : " + INTROVERT + "\nCHANGE QUESTION" + CHANGE_QUESTION);
 
         switch (CHANGE_QUESTION) {
             case 1:
                 QUESTION_LBL.setText(SOAL2[0]);
-                C_BTN.setText(SOAL2[1]);
+                A_BTN.setText(SOAL2[1]);
                 B_BTN.setText(SOAL2[2]);
                 C_BTN.setText(SOAL2[3]);
                 break;
             case 2:
                 QUESTION_LBL.setText(SOAL3[0]);
-                C_BTN.setText(SOAL3[1]);
+                A_BTN.setText(SOAL3[1]);
                 B_BTN.setText(SOAL3[2]);
                 C_BTN.setText(SOAL3[3]);
                 break;
             case 3:
                 QUESTION_LBL.setText(SOAL4[0]);
-                C_BTN.setText(SOAL4[1]);
+                A_BTN.setText(SOAL4[1]);
                 B_BTN.setText(SOAL4[2]);
                 C_BTN.setText(SOAL4[3]);
                 break;
             case 4:
                 QUESTION_LBL.setText(SOAL5[0]);
-                C_BTN.setText(SOAL5[1]);
+                A_BTN.setText(SOAL5[1]);
                 B_BTN.setText(SOAL5[2]);
                 C_BTN.setText(SOAL5[3]);
                 break;
             case 5:
                 QUESTION_LBL.setText(SOAL6[0]);
-                C_BTN.setText(SOAL6[1]);
+                A_BTN.setText(SOAL6[1]);
                 B_BTN.setText(SOAL6[2]);
                 C_BTN.setText(SOAL6[3]);
                 break;
             case 6:
                 QUESTION_LBL.setText(SOAL7[0]);
-                C_BTN.setText(SOAL7[1]);
+                A_BTN.setText(SOAL7[1]);
                 B_BTN.setText(SOAL7[2]);
                 C_BTN.setText(SOAL7[3]);
                 break;
             case 7:
                 QUESTION_LBL.setText(SOAL8[0]);
-                C_BTN.setText(SOAL8[1]);
+                A_BTN.setText(SOAL8[1]);
                 B_BTN.setText(SOAL8[2]);
                 C_BTN.setText(SOAL8[3]);
                 break;
             case 8:
                 QUESTION_LBL.setText(SOAL9[0]);
-                C_BTN.setText(SOAL9[1]);
+                A_BTN.setText(SOAL9[1]);
                 B_BTN.setText(SOAL9[2]);
                 C_BTN.setText(SOAL9[3]);
                 break;
             case 9:
                 QUESTION_LBL.setText(SOAL10[0]);
-                C_BTN.setText(SOAL10[1]);
+                A_BTN.setText(SOAL10[1]);
                 B_BTN.setText(SOAL10[2]);
                 C_BTN.setText(SOAL10[3]);
                 break;
@@ -309,55 +309,55 @@ public class Test_Page extends javax.swing.JFrame {
         switch (CHANGE_QUESTION) {
             case 1:
                 QUESTION_LBL.setText(SOAL2[0]);
-                C_BTN.setText(SOAL2[1]);
+                A_BTN.setText(SOAL2[1]);
                 B_BTN.setText(SOAL2[2]);
                 C_BTN.setText(SOAL2[3]);
                 break;
             case 2:
                 QUESTION_LBL.setText(SOAL3[0]);
-                C_BTN.setText(SOAL3[1]);
+                A_BTN.setText(SOAL3[1]);
                 B_BTN.setText(SOAL3[2]);
                 C_BTN.setText(SOAL3[3]);
                 break;
             case 3:
                 QUESTION_LBL.setText(SOAL4[0]);
-                C_BTN.setText(SOAL4[1]);
+                A_BTN.setText(SOAL4[1]);
                 B_BTN.setText(SOAL4[2]);
                 C_BTN.setText(SOAL4[3]);
                 break;
             case 4:
                 QUESTION_LBL.setText(SOAL5[0]);
-                C_BTN.setText(SOAL5[1]);
+                A_BTN.setText(SOAL5[1]);
                 B_BTN.setText(SOAL5[2]);
                 C_BTN.setText(SOAL5[3]);
                 break;
             case 5:
                 QUESTION_LBL.setText(SOAL6[0]);
-                C_BTN.setText(SOAL6[1]);
+                A_BTN.setText(SOAL6[1]);
                 B_BTN.setText(SOAL6[2]);
                 C_BTN.setText(SOAL6[3]);
                 break;
             case 6:
                 QUESTION_LBL.setText(SOAL7[0]);
-                C_BTN.setText(SOAL7[1]);
+                A_BTN.setText(SOAL7[1]);
                 B_BTN.setText(SOAL7[2]);
                 C_BTN.setText(SOAL7[3]);
                 break;
             case 7:
                 QUESTION_LBL.setText(SOAL8[0]);
-                C_BTN.setText(SOAL8[1]);
+                A_BTN.setText(SOAL8[1]);
                 B_BTN.setText(SOAL8[2]);
                 C_BTN.setText(SOAL8[3]);
                 break;
             case 8:
                 QUESTION_LBL.setText(SOAL9[0]);
-                C_BTN.setText(SOAL9[1]);
+                A_BTN.setText(SOAL9[1]);
                 B_BTN.setText(SOAL9[2]);
                 C_BTN.setText(SOAL9[3]);
                 break;
             case 9:
                 QUESTION_LBL.setText(SOAL10[0]);
-                C_BTN.setText(SOAL10[1]);
+                A_BTN.setText(SOAL10[1]);
                 B_BTN.setText(SOAL10[2]);
                 C_BTN.setText(SOAL10[3]);
                 break;

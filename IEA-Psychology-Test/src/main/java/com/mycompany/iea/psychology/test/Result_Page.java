@@ -54,22 +54,21 @@ public class Result_Page extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(430, 932));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(430, 932));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         INTROVERT_LBL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         INTROVERT_LBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Introvert.png"))); // NOI18N
-        jPanel1.add(INTROVERT_LBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 340, 260));
+        jPanel1.add(INTROVERT_LBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 400, 260));
 
         EKSTROVERT_LBL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EKSTROVERT_LBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Ekstrovert.png"))); // NOI18N
-        jPanel1.add(EKSTROVERT_LBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 370, 260));
+        jPanel1.add(EKSTROVERT_LBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 390, 260));
 
         AMBIVERT_LBL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AMBIVERT_LBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Ambivert.png"))); // NOI18N
-        jPanel1.add(AMBIVERT_LBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 360, 260));
+        jPanel1.add(AMBIVERT_LBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 400, 260));
 
         HOME_BTN.setBackground(new java.awt.Color(18, 15, 131));
         HOME_BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Homee.png"))); // NOI18N
@@ -85,7 +84,6 @@ public class Result_Page extends javax.swing.JFrame {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 620, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Result.png"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(430, 932));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
