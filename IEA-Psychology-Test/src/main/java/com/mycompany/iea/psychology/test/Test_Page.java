@@ -6,26 +6,55 @@ package com.mycompany.iea.psychology.test;
 
 /**
  *
- * @author Asus
+ * @author Muhammad Idris
+ * @author Ivanka Audy Ikhwan
+ * @author Tara Almanda
  */
 public class Test_Page extends javax.swing.JFrame {
 
+    // introvert , ekstrovert, ambivert of question
+    int CHANGE_QUESTION = 0, INTROVERT = 0, EKSTROVERT = 0, AMBIVERT = 0;
     String USERNAME;
-    String SOAL1 = "SOAL SATU";
-    String SOAL2 = "SOAL DUA";
-    String SOAL3 = "SOAL 3";
-    String SOAL4 = "SOAL 4";
-    String SOAL5 = "SOAL 5";
-    String SOAL6 = "SOAL 6";
-    String SOAL7 = "SOAL 7";
-    String SOAL8 = "SOAL 8";
-    String SOAL9 = "SOAL 9";
-    String SOAL10 = "SOAL 10";
-    String SOAL11 = "SOAL 11";
-    String SOAL12 = "SOAL 12";
-    String SOAL13 = "SOAL 13";
-    String SOAL14 = "SOAL 14";
-    String SOAL15 = "SOAL 15";
+    String[] SOAL1 = {"Bagaimana reaksi kamu saat mendengar kabar yang mengejutkan?",
+        "Berpikir lebih dulu",
+        "Langsung terkejut",
+        "Terlihat kaget dan tetap tenang"};
+    String[] SOAL2 = {"Dalam pekerjaan kamu , kamu paling produktif dengan cara kerja yang seperti apa ?",
+        "Kerja sendiri dan independen",
+        "biar lebih cepat selesai, kerja kelompok",
+        "kerja sendiri atau kelompok sama saja"};
+    String[] SOAL3 = {"Setiap orang punya waktu beraktifitas atau bekerja, juga punya waktu luang untuk dihabiskan, bagaimana cara kamu menghabiskan waktu luang?",
+        "bersantai dirumah saja",
+        "Main diluar dan bertemu teman",
+        "seimbang saja agar tidak bosan"};
+    String[] SOAL4 = {"Setiap orang bisa mengalami kelelahan dan rasa penat, bagaimana dan cara kamu untuk mengisi energi agar mood kamu bagus dan bisa semangat pagi seperti biasa?",
+        "Istirahat dirumah saja",
+        "Pergi ke mall untuk jalan2",
+        "Nongkrong sendiri atau bareng teman2"};
+    String[] SOAL5 = {"Apa sudut pandang kamu atau peran kamu saat berteman dan bersosialisasi dalam lingkunganmu?",
+        "Lebih sering jadi pendengar",
+        "Lebih aktif bercerita",
+        "menjadi pendengar dan aktif bercerita"};
+    String[] SOAL6 = {"Kira2 bagaimana penilaian orang terhadap kamu?",
+        "Aku orang yang serius",
+        "Aku orang yang pandai bergaul",
+        "Aku tenang dan pandai bersosialisasi"};
+    String[] SOAL7 = {"Aktifitas apa yang membuatmu lupa diri dan lupa waktu?",
+        "Bersantai sendiri dan tiduran",
+        "Saat ngobrol seru dengan teman2",
+        "Saat me time / kumpul dgn teman"};
+    String[] SOAL8 = {"Setiap orang memilki social media, bagaimana kamu mendefinisikan aktifitas kamu dalam social media yang kamu miliki?",
+        "Aku jarang posting",
+        "Aku suka post dan aktif",
+        "Kadang post, kadang tidak"};
+    String[] SOAL9 = {"Bagaimana cara kamu membaca buku atau berita di media social?",
+        "Membaca dengan detail",
+        "Membaca awal tengah dan akhir saja",
+        "Mencari bagian penting saja"};
+    String[] SOAL10 = {"Jika boleh memilih, hadiah mana yang akan kau pilih di bawah ini?",
+        "Lilin aroma terapi dan buku favorit",
+        "Voucher ngegym dan sandal travel",
+        "Buku kesukaan dan parfum"};
 
     /**
      * Creates new form Test_Page
@@ -33,6 +62,12 @@ public class Test_Page extends javax.swing.JFrame {
     public Test_Page(String USERNAME_) {
         initComponents();
         USERNAME = USERNAME_;
+
+        QUESTION_LBL.setText(SOAL1[0]);
+        A_BTN.setText(SOAL1[1]);
+        B_BTN.setText(SOAL1[2]);
+        C_BTN.setText(SOAL1[3]);
+
     }
 
     /**
@@ -45,78 +80,62 @@ public class Test_Page extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        C_BTN = new javax.swing.JButton();
         A_BTN = new javax.swing.JButton();
-        A_BTN1 = new javax.swing.JButton();
-        A_BTN2 = new javax.swing.JButton();
-        A_BTN3 = new javax.swing.JButton();
+        B_BTN = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        QUESTION_LBL = new javax.swing.JTextPane();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(430, 932));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(430, 932));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jScrollPane1.setViewportView(jTextPane1);
+        C_BTN.setBackground(new java.awt.Color(39, 100, 242));
+        C_BTN.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        C_BTN.setForeground(java.awt.Color.white);
+        C_BTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                C_BTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(C_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 650, 370, 70));
 
-        A_BTN.setText("a");
+        A_BTN.setBackground(new java.awt.Color(8, 62, 189));
+        A_BTN.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        A_BTN.setForeground(java.awt.Color.white);
         A_BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 A_BTNActionPerformed(evt);
             }
         });
+        jPanel1.add(A_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 370, 70));
 
-        A_BTN1.setText("b");
-        A_BTN1.addActionListener(new java.awt.event.ActionListener() {
+        B_BTN.setBackground(new java.awt.Color(24, 56, 131));
+        B_BTN.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        B_BTN.setForeground(java.awt.Color.white);
+        B_BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A_BTN1ActionPerformed(evt);
+                B_BTNActionPerformed(evt);
             }
         });
+        jPanel1.add(B_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, 370, 70));
 
-        A_BTN2.setText("c");
-        A_BTN2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A_BTN2ActionPerformed(evt);
-            }
-        });
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/image 1.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
-        A_BTN3.setText("d");
-        A_BTN3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A_BTN3ActionPerformed(evt);
-            }
-        });
+        QUESTION_LBL.setEditable(false);
+        QUESTION_LBL.setBackground(new java.awt.Color(191, 210, 255));
+        QUESTION_LBL.setBorder(null);
+        QUESTION_LBL.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
+        QUESTION_LBL.setText("Question here");
+        jPanel1.add(QUESTION_LBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 360, 150));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
-                    .addComponent(A_BTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(A_BTN1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(A_BTN2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(A_BTN3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(175, 175, 175)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(A_BTN, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(A_BTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(A_BTN2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(A_BTN3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(232, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Test Page.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 930));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,21 +155,222 @@ public class Test_Page extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void C_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_BTNActionPerformed
+        // TODO add your handling code here:
+        AMBIVERT++;
+        CHANGE_QUESTION++;
+        System.out.println("AMBIVERT : " + AMBIVERT + "\nCHANGE QUESTION" + CHANGE_QUESTION);
+
+        switch (CHANGE_QUESTION) {
+            case 1:
+                QUESTION_LBL.setText(SOAL2[0]);
+                C_BTN.setText(SOAL2[1]);
+                B_BTN.setText(SOAL2[2]);
+                C_BTN.setText(SOAL2[3]);
+                break;
+            case 2:
+                QUESTION_LBL.setText(SOAL3[0]);
+                C_BTN.setText(SOAL3[1]);
+                B_BTN.setText(SOAL3[2]);
+                C_BTN.setText(SOAL3[3]);
+                break;
+            case 3:
+                QUESTION_LBL.setText(SOAL4[0]);
+                C_BTN.setText(SOAL4[1]);
+                B_BTN.setText(SOAL4[2]);
+                C_BTN.setText(SOAL4[3]);
+                break;
+            case 4:
+                QUESTION_LBL.setText(SOAL5[0]);
+                C_BTN.setText(SOAL5[1]);
+                B_BTN.setText(SOAL5[2]);
+                C_BTN.setText(SOAL5[3]);
+                break;
+            case 5:
+                QUESTION_LBL.setText(SOAL6[0]);
+                C_BTN.setText(SOAL6[1]);
+                B_BTN.setText(SOAL6[2]);
+                C_BTN.setText(SOAL6[3]);
+                break;
+            case 6:
+                QUESTION_LBL.setText(SOAL7[0]);
+                C_BTN.setText(SOAL7[1]);
+                B_BTN.setText(SOAL7[2]);
+                C_BTN.setText(SOAL7[3]);
+                break;
+            case 7:
+                QUESTION_LBL.setText(SOAL8[0]);
+                C_BTN.setText(SOAL8[1]);
+                B_BTN.setText(SOAL8[2]);
+                C_BTN.setText(SOAL8[3]);
+                break;
+            case 8:
+                QUESTION_LBL.setText(SOAL9[0]);
+                C_BTN.setText(SOAL9[1]);
+                B_BTN.setText(SOAL9[2]);
+                C_BTN.setText(SOAL9[3]);
+                break;
+            case 9:
+                QUESTION_LBL.setText(SOAL10[0]);
+                C_BTN.setText(SOAL10[1]);
+                B_BTN.setText(SOAL10[2]);
+                C_BTN.setText(SOAL10[3]);
+                break;
+            case 10:
+                Result_Page RESULT = new Result_Page(AMBIVERT, EKSTROVERT, INTROVERT);
+                RESULT.setLocationRelativeTo(null);
+                RESULT.setVisible(true);
+                this.setVisible(false);
+                break;
+            default:
+                break;
+        }
+
+    }//GEN-LAST:event_C_BTNActionPerformed
+
     private void A_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_BTNActionPerformed
         // TODO add your handling code here:
+        INTROVERT++;
+        CHANGE_QUESTION++;
+        System.out.println("EKSTROVERT : " + INTROVERT + "\nCHANGE QUESTION" + CHANGE_QUESTION);
+
+        switch (CHANGE_QUESTION) {
+            case 1:
+                QUESTION_LBL.setText(SOAL2[0]);
+                C_BTN.setText(SOAL2[1]);
+                B_BTN.setText(SOAL2[2]);
+                C_BTN.setText(SOAL2[3]);
+                break;
+            case 2:
+                QUESTION_LBL.setText(SOAL3[0]);
+                C_BTN.setText(SOAL3[1]);
+                B_BTN.setText(SOAL3[2]);
+                C_BTN.setText(SOAL3[3]);
+                break;
+            case 3:
+                QUESTION_LBL.setText(SOAL4[0]);
+                C_BTN.setText(SOAL4[1]);
+                B_BTN.setText(SOAL4[2]);
+                C_BTN.setText(SOAL4[3]);
+                break;
+            case 4:
+                QUESTION_LBL.setText(SOAL5[0]);
+                C_BTN.setText(SOAL5[1]);
+                B_BTN.setText(SOAL5[2]);
+                C_BTN.setText(SOAL5[3]);
+                break;
+            case 5:
+                QUESTION_LBL.setText(SOAL6[0]);
+                C_BTN.setText(SOAL6[1]);
+                B_BTN.setText(SOAL6[2]);
+                C_BTN.setText(SOAL6[3]);
+                break;
+            case 6:
+                QUESTION_LBL.setText(SOAL7[0]);
+                C_BTN.setText(SOAL7[1]);
+                B_BTN.setText(SOAL7[2]);
+                C_BTN.setText(SOAL7[3]);
+                break;
+            case 7:
+                QUESTION_LBL.setText(SOAL8[0]);
+                C_BTN.setText(SOAL8[1]);
+                B_BTN.setText(SOAL8[2]);
+                C_BTN.setText(SOAL8[3]);
+                break;
+            case 8:
+                QUESTION_LBL.setText(SOAL9[0]);
+                C_BTN.setText(SOAL9[1]);
+                B_BTN.setText(SOAL9[2]);
+                C_BTN.setText(SOAL9[3]);
+                break;
+            case 9:
+                QUESTION_LBL.setText(SOAL10[0]);
+                C_BTN.setText(SOAL10[1]);
+                B_BTN.setText(SOAL10[2]);
+                C_BTN.setText(SOAL10[3]);
+                break;
+            case 10:
+                Result_Page RESULT = new Result_Page(AMBIVERT, EKSTROVERT, INTROVERT);
+                RESULT.setLocationRelativeTo(null);
+                RESULT.setVisible(true);
+                this.setVisible(false);
+                break;
+            default:
+                break;
+        }
     }//GEN-LAST:event_A_BTNActionPerformed
 
-    private void A_BTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_BTN1ActionPerformed
+    private void B_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_BTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_A_BTN1ActionPerformed
+        EKSTROVERT++;
+        CHANGE_QUESTION++;
+        System.out.println("EKSTROVERT : " + EKSTROVERT + "\nCHANGE QUESTION" + CHANGE_QUESTION);
 
-    private void A_BTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_BTN2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A_BTN2ActionPerformed
-
-    private void A_BTN3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_BTN3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A_BTN3ActionPerformed
+        switch (CHANGE_QUESTION) {
+            case 1:
+                QUESTION_LBL.setText(SOAL2[0]);
+                C_BTN.setText(SOAL2[1]);
+                B_BTN.setText(SOAL2[2]);
+                C_BTN.setText(SOAL2[3]);
+                break;
+            case 2:
+                QUESTION_LBL.setText(SOAL3[0]);
+                C_BTN.setText(SOAL3[1]);
+                B_BTN.setText(SOAL3[2]);
+                C_BTN.setText(SOAL3[3]);
+                break;
+            case 3:
+                QUESTION_LBL.setText(SOAL4[0]);
+                C_BTN.setText(SOAL4[1]);
+                B_BTN.setText(SOAL4[2]);
+                C_BTN.setText(SOAL4[3]);
+                break;
+            case 4:
+                QUESTION_LBL.setText(SOAL5[0]);
+                C_BTN.setText(SOAL5[1]);
+                B_BTN.setText(SOAL5[2]);
+                C_BTN.setText(SOAL5[3]);
+                break;
+            case 5:
+                QUESTION_LBL.setText(SOAL6[0]);
+                C_BTN.setText(SOAL6[1]);
+                B_BTN.setText(SOAL6[2]);
+                C_BTN.setText(SOAL6[3]);
+                break;
+            case 6:
+                QUESTION_LBL.setText(SOAL7[0]);
+                C_BTN.setText(SOAL7[1]);
+                B_BTN.setText(SOAL7[2]);
+                C_BTN.setText(SOAL7[3]);
+                break;
+            case 7:
+                QUESTION_LBL.setText(SOAL8[0]);
+                C_BTN.setText(SOAL8[1]);
+                B_BTN.setText(SOAL8[2]);
+                C_BTN.setText(SOAL8[3]);
+                break;
+            case 8:
+                QUESTION_LBL.setText(SOAL9[0]);
+                C_BTN.setText(SOAL9[1]);
+                B_BTN.setText(SOAL9[2]);
+                C_BTN.setText(SOAL9[3]);
+                break;
+            case 9:
+                QUESTION_LBL.setText(SOAL10[0]);
+                C_BTN.setText(SOAL10[1]);
+                B_BTN.setText(SOAL10[2]);
+                C_BTN.setText(SOAL10[3]);
+                break;
+            case 10:
+                Result_Page RESULT = new Result_Page(AMBIVERT, EKSTROVERT, INTROVERT);
+                RESULT.setLocationRelativeTo(null);
+                RESULT.setVisible(true);
+                this.setVisible(false);
+                break;
+            default:
+                break;
+        }
+    }//GEN-LAST:event_B_BTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,11 +409,11 @@ public class Test_Page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton A_BTN;
-    private javax.swing.JButton A_BTN1;
-    private javax.swing.JButton A_BTN2;
-    private javax.swing.JButton A_BTN3;
+    private javax.swing.JButton B_BTN;
+    private javax.swing.JButton C_BTN;
+    private javax.swing.JTextPane QUESTION_LBL;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }

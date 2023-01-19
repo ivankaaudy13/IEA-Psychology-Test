@@ -17,6 +17,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+
     }
 
     /**
@@ -28,16 +29,31 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        LOGIN_BTN = new javax.swing.JButton();
         USERNAME_TEXT = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        LOGIN_BTN = new javax.swing.JButton();
         AGE_SPINNER = new javax.swing.JSpinner();
         jLabel2 = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        USERNAME_TEXT.setBackground(new java.awt.Color(231, 221, 221));
+        USERNAME_TEXT.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
+        USERNAME_TEXT.setForeground(new java.awt.Color(51, 102, 0));
+        USERNAME_TEXT.setText("Nama");
+        USERNAME_TEXT.setBorder(null);
+        USERNAME_TEXT.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jPanel1.add(USERNAME_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 500, 240, 40));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Rectangle 3.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 300, 60));
 
         LOGIN_BTN.setBackground(new java.awt.Color(0, 0, 153));
         LOGIN_BTN.setForeground(java.awt.Color.white);
@@ -50,12 +66,9 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(LOGIN_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 738, 250, 51));
 
-        USERNAME_TEXT.setBackground(new java.awt.Color(231, 221, 221));
-        USERNAME_TEXT.setText("Username");
-        USERNAME_TEXT.setBorder(null);
-        USERNAME_TEXT.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jPanel1.add(USERNAME_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 250, 30));
-        jPanel1.add(AGE_SPINNER, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 600, -1, -1));
+        AGE_SPINNER.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        AGE_SPINNER.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(AGE_SPINNER, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, 90, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/iea/psychology/test/iconimage/Login.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 930));
@@ -128,7 +141,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JSpinner AGE_SPINNER;
     private javax.swing.JButton LOGIN_BTN;
     private javax.swing.JTextField USERNAME_TEXT;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -37,7 +37,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(430, 932));
 
         jPanel1.setBackground(new java.awt.Color(51, 0, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(430, 932));
@@ -48,6 +47,7 @@ public class Dashboard extends javax.swing.JFrame {
         YES_BTN.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         YES_BTN.setForeground(java.awt.Color.white);
         YES_BTN.setText("Start Test");
+        YES_BTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         YES_BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 YES_BTNActionPerformed(evt);
@@ -84,6 +84,8 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void YES_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YES_BTNActionPerformed
         // TODO add your handling code here:
+        
+        // pindah page dan mulai testnya
         Test_Page TESTPAGE = new Test_Page(USERNAME);
         TESTPAGE.setLocationRelativeTo(null);
         TESTPAGE.setVisible(true);
